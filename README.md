@@ -34,7 +34,7 @@ The solution consists of two dedicated C++ DLL modules:
 To make the server load the compiled DLLs automatically upon startup, inject them into the **Import Address Table (IAT)** using **Stud_PE**:
 
 ### 1️⃣ Setting up `cf_gamesrv`
-1. Compile the `GameSrv` patcher project in Visual Studio (Release / x86).
+1. Compile the `server-gamesrv` patcher project in Visual Studio (Release / x86).
 2. Copy your compiled `.dll` **AND** the **MinHook DLL** into your `cf_gamesrv` folder (right next to `cf_gamesrv.exe`).
 3. Open **`Stud_PE`** and load **`cf_gamesrv.exe`**.
 4. Navigate to the **`Functions`** tab ➡️ right-click inside the Imported Functions area ➡️ select **`Add New Import`**.
@@ -42,7 +42,7 @@ To make the server load the compiled DLLs automatically upon startup, inject the
 6. Click **`Save`** to update the PE header. *(Stud_PE automatically creates a `.bak` backup of your original executable).*
 
 ### 2️⃣ Setting up `cf_hostsrv`
-1. Compile the `HostSrv` patcher project in Visual Studio (Release / x86).
+1. Compile the `server-hostsrv` patcher project in Visual Studio (Release / x86).
 2. Copy your compiled `.dll` into the `cf_hostsrv` folder (where **`object.dll`** is located).
 3. Open **`Stud_PE`** and load **`object.dll`**.
 4. Navigate to the **`Functions`** tab ➡️ right-click ➡️ select **`Add New Import`**.
