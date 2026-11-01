@@ -2,7 +2,7 @@
 
 A complete, open-source C++ runtime memory patching and function hooking solution designed to remove hardcoded item table limits on **CrossFire Server Binaries (`cf_gamesrv.exe` & `cf_hostsrv`)**.
 
-This repository completes the open-source ecosystem started in **[Vortex Anti-Cheat](https://github.com/AliShe3a/VortexAC)**, which introduced the **Client-Side Runtime Memory Patcher** for `item.cft` and `bf005.ltc`. Instead of relying on blind, closed-source binaries with fixed limits, server administrators can now inspect, customize, and compile the entire server-side solution themselves.
+This repository completes the open-source ecosystem started in **[Vortex Anti-Cheat](https://github.com/AliShe3a/VortexAC)**, which introduced the **Client-Side Runtime Memory Patcher** for `CShell.dll` and `Object.dll`. Instead of relying on blind, closed-source binaries with fixed limits, server administrators can now inspect, customize, and compile the entire server-side solution themselves.
 
 ---
 
@@ -55,7 +55,7 @@ To make the server load the compiled DLLs automatically upon startup, inject the
 
 | Component | Target Files / Modules | Method | Status / Link |
 | :--- | :--- | :--- | :--- |
-| **Client-Side Limit Remover** | `item.cft` & `bf005.ltc` | Runtime Memory Patching | Included in **[Vortex Anti-Cheat](https://github.com/AliShe3a/VortexAC)** |
+| **Client-Side Limit Remover** | `CShell.dll` & `Object.dll` | Runtime Memory Patching | Included in **[Vortex Anti-Cheat](https://github.com/AliShe3a/VortexAC)** |
 | **Game Server Limit Remover** | `cf_gamesrv.exe` | MinHook Detour + Memory Patch | **Included in this repo** |
 | **Host Server Limit Remover** | `cf_hostsrv` (`object.dll`) | Runtime Memory Patching | **Included in this repo** |
 
